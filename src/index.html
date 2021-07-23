@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <style>
+        pre {
+            padding: 8px;
+            background: #eee;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 4px 0;
+        }
+
+        img {
+            width: 512px;
+            max-width: 100%;
+            display: block;
+            margin: 12px auto 16px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Тестовое задание</h1>
+
+    <p>Первым делом, необходимо сделать запрос на указанный URL и получить json с названиям пунктов меню (можно использовать библиотеки, например, <i>axios</i>)</p>
+
+    <pre>http://url.com/radial-menu?length=&lt;number&gt;</pre>
+
+    <div><pre>?length=<i>&lt;number&gt;</i></pre> - вместо <i>&lt;number&gt;</i> можно использовать свое количество, если нужно какое-то конкретное значение (от 4 до 10 элементов)</div>
+
+    <hr>
+
+    <p>Следующим шагом нужно построить <b>динамическое</b> радиальное меню на основе получаемого json массива:</p>
+
+    <ul>
+        <li>Меню <b>должно</b> перетаскиваться по странице от края до края (нативным методом)</li>
+        <li>Если часть меню скрывается за пределами экрана, то при наведении на меню <b>необходимо</b> иметь возможность колесиком прокрутить и увидеть необходимый пункт меню</li>
+        <li>Содержимое пункта меню (текст и иконка) <b>всегда должно</b> оставаться в обычной ориентации, т.е. текст должен легко читаться слева-направо</li>
+        <li>Иконки <b>должны</b> быть в svg с возможностью изменения цвета в сочетании с текстом (иконки(у) можно взять любые на свой вкус или с макета)</li>
+        <li>Стили лучше всего писать на Scss или Less - на свое усмотрение. Мы используем первое :)</li>
+    </ul>
+
+    <img src="/sample.gif" alt="sample-radial-menu">
+
+    <hr>
+
+    <h2>Ресурсы</h2>
+
+    <ul>
+        <li>Figma (макет) - <a href="https://www.figma.com/file/9329RS5oFc0sI5CMpspU9E/Radial-menu?node-id=0%3A1" target="_blank">https://www.figma.com/file/9329RS5oFc0sI5CMpspU9E/Radial-menu?node-id=0%3A1</a></li>
+        <li>Query URL (со случайным количеством элементов меню) - <a href="http://url.com/radial-menu" target="_blank">http://url.com/radial-menu</a></li>
+    </ul>
+</main>
+</body>
+</html>
