@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>Тестовое задание</title>
     <style>
+        code {
+            padding: 4px 8px;
+            background: #eee;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 4px 0;
+        }
+
         pre {
             padding: 8px;
             background: #eee;
@@ -26,11 +35,15 @@
 <main>
     <h1>Тестовое задание</h1>
 
-    <p>Первым делом, необходимо сделать <b>GET</b> запрос на указанный URL и получить json с названиям пунктов меню (можно использовать библиотеки, например, <i>axios</i>)</p>
+    <h3>Необходимо использовать Vue.js и JavaScript (без jQuery)</h3>
 
-    <pre>http://elma-test-task.tmweb.ru/radial-menu?length=&lt;number&gt;</pre>
+    <div>Первым делом, необходимо сделать <b>GET</b> запрос сюда: <pre>http://elma-test-task.tmweb.ru/radial-menu</pre> и получить json с названиями пунктов меню (можно использовать библиотеки, например, <i>axios</i>)</div>
 
-    <div><pre>?length=<i>&lt;number&gt;</i></pre> - вместо <i>&lt;number&gt;</i> можно использовать свое количество, если нужно какое-то конкретное значение (от 4 до 10 элементов)</div>
+    <h4>GET-параметры</h4>
+
+    <ul>
+        <li><pre>?length=<i>&lt;number&gt;</i></pre> - вместо <i>&lt;number&gt;</i> используйте свое значение (от 4 до 10), если нужно какое-то конкретное количество элементов в меню</li>
+    </ul>
 
     <hr>
 
@@ -45,6 +58,15 @@
     </ul>
 
     <img src="/sample.gif" alt="sample-radial-menu">
+
+    <hr>
+
+    <h2>Формулы для построения</h2>
+
+    <ul>
+        <li>Координаты точки на окружности <code lang="javascript">getDegreePosition(angle, radius) { return { x: Math.cos(degToRad(angle)) * radius, y: Math.sin(degToRad(angle)) * radius } }</code></li>
+        <li>Конвертирование degrees в radians <code lang="javascript">degToRad(angle) { return angle * (Math.PI / 180) }</code></li>
+    </ul>
 
     <hr>
 
